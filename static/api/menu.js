@@ -2,16 +2,20 @@ class Menu extends React.Component{
   render(){
     return(
       <button
-        className="btn btn-primary"
+        className="btn btn-success"
         data-toggle="collapse"
-        data-target={"#" + this.props.id}
+        data-target={"#" + this.props.target.id}
       >
-        {this.props.value}
+        {this.props.target.value}
       </button>
     )
   }
 }
+const hey = {
+	id:"hello",
+	value:"Hello boy"
+}
 ReactDOM.render(
-  <Menu id="hello" value="Hello boy"/>,
+  <Menu target={hey} />,
   document.getElementById('root')
 );

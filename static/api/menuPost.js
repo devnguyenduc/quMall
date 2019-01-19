@@ -1,0 +1,34 @@
+class MenuPost extends React.Component{
+	constructor(props){super(props)}
+
+	render(){
+		return(
+			<ul className="list-group">
+				<li className="list-group-item">
+					<button className="btn btn-info"
+					 data-toggle="collapse" data-target={"#" + this.props.element.id_target}>
+					 	hello
+					</button>
+					<div id={this.props.element.id_target} className="collapse">
+						<Menu target={this.props.element.children_target} />
+					</div>
+				</li>
+				<li className="list-group-item">Hello</li>
+			</ul>
+		);
+	}
+}
+
+const elementvalue = {
+	id_post: "",
+	id_target: "hello",
+	children_target:{
+		id: "test",
+		value:" Hello boy",
+	}
+}
+
+ReactDOM.render(
+	<MenuPost element={elementvalue}/>,
+	document.getElementById("test_list")
+);

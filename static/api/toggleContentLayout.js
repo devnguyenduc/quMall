@@ -5,7 +5,7 @@ const toggleLayoutStyle = {
   cursor:"pointer",
   transitionDuration: "2s",
   backgroundColor:"CornflowerBlue",
-  background:"linear-gradient(to right,CornflowerBlue,Cyan)"
+  background:"linear-gradient(to right,CornflowerBlue,Cyan)",
 };
 
 class ToggleContentLayout extends React.Component{
@@ -13,7 +13,6 @@ class ToggleContentLayout extends React.Component{
     super(props);
   }
   render(){
-    if(this.props.element.imgsrc.length > 0){
       return(
         <div>
           <button type="button" className="card" style={toggleLayoutStyle}
@@ -27,15 +26,16 @@ class ToggleContentLayout extends React.Component{
             <div className="modal-dialog modal-lg">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h4 className="modal-title">Modal Heading</h4>
-                  <button type="button" className="close" data-dismiss="modal">&times;</button>
+                  <h4 className="modal-title">{this.props.element.content.title}</h4>
                 </div>
 
                 <div className="modal-body">
-                  Modal body..
+                  {this.props.element.content.body}
                 </div>
 
                 <div className="modal-footer">
+                  <button type="button" className="btn btn-success" data-dismiss="modal">Previous</button>
+               	  <button type="button" className="btn btn-success" data-dismiss="modal">Next</button>
                   <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
 
@@ -44,16 +44,17 @@ class ToggleContentLayout extends React.Component{
           </div>
         </div>
       );
-    }
 
   }
 };
 
 const el = {
-  target : "hello",
-  imgsrc : "",
-  alt : "",
-  title : "Chúng ta không thuộc về nhau",
+  target: "hellox",
+  title: "Chúng ta không thuộc về nhau",
+  content:{
+  	title:"",
+  	body:"",
+  }
 
 };
 
