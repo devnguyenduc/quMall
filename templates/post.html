@@ -29,7 +29,8 @@
     <script type="text/babel" src="{{ url_for('static',filename='api/lastestPost.js') }}"></script>
     <script type="text/babel" src="{{ url_for('static',filename='api/pageEditor.js') }}"></script>
     <script type="text/babel" src="{{ url_for('static',filename='api/toggleContentLayout.js') }}"></script>
-
+	<script type="text/babel" src="{{ url_for('static',filename='api/menuPost.js') }}"></script>
+ 
   </head>
   <body class="bg-light">
     <!-- Navbar  -->
@@ -73,12 +74,14 @@
       <div class="row">
         <div class="col-md-4 col-xl-3">
           <!-- Application menu -->
-          <div class="border content-slide bg-white border rounded" id="">
+          <div class="border content-slide bg-white border rounded">
+          	<div class="m-2" id="test_list">
+          	</div>
           </div>
         </div>
         <div class="col-md-8 col-xl-6" id="data">
-          <div class="bg-white content-slide border rounded" id="">
-
+          <div class="bg-white content-slide border rounded" id="test_toggle">
+			
           </div>
         </div>
         <div class="d-none d-xl-block col-xl-3">
