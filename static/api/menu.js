@@ -12,7 +12,7 @@ class Menu extends React.Component{
   }
 }
 const hey = {
-	id:"hello",
+	id:"new",
 	value:"Hello boy"
 }
 ReactDOM.render(

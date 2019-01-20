@@ -14,7 +14,7 @@ class ToggleContentLayout extends React.Component{
   }
   render(){
       return(
-        <div>
+        <div className="collapse" id={this.props.element.targeted_id}>
           <button type="button" className="card" style={toggleLayoutStyle}
            data-toggle="modal" data-target={"#" + this.props.element.target}>
             <div className="card-body text-center">
@@ -49,11 +49,12 @@ class ToggleContentLayout extends React.Component{
 };
 
 const el = {
+  targeted_id:"new",
   target: "hellox",
   title: "Chúng ta không thuộc về nhau",
   content:{
-  	title:"",
-  	body:"",
+  	title:"hello",
+  	body:"hello",
   }
 
 };
